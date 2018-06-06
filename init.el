@@ -52,3 +52,8 @@
 
 (use-package autorevert
   :diminish)
+
+(use-package jedi
+  :ensure t
+  :bind ("C-c ;" . jedi:goto-definition)
+  :hook (python-mode . jedi:setup))
