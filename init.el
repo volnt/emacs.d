@@ -8,9 +8,11 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
-(eval-when-compile
-  (add-to-list 'load-path "~/.emacs.d/site-lisp/use-package/")
-  (require 'use-package))
+(add-to-list 'load-path "~/.emacs.d/site-lisp/use-package")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/diminish.el")
+
+(require 'use-package)
+(require 'diminish)
 
 ;; Install and setup packages
 (use-package magit
