@@ -24,3 +24,7 @@
 (use-package multiple-cursors
   :ensure t
   :bind ("C-c m" . mc/mark-all-in-region))
+
+(use-package rainbow-delimiters
+  :ensure t
+  :config (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
