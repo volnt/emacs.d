@@ -16,3 +16,7 @@
 (use-package magit
   :ensure t
   :bind ("C-c s" . magit-status))
+
+(use-package undo-tree
+  :ensure t
+  :config (global-undo-tree-mode))
