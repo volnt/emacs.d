@@ -17,7 +17,8 @@
 ;; Install and setup packages
 (use-package magit
   :ensure t
-  :bind ("C-c s" . magit-status))
+  :bind (("C-c s" . magit-status)
+	 ("C-c b" . magit-blame)))
 
 (use-package undo-tree
   :ensure t
