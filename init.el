@@ -43,3 +43,8 @@
   :ensure t
   :bind ("C-c i" . py-isort-before-save)
   :custom (py-isort-options '("-w 120")))
+
+(use-package projectile
+  :ensure t
+  :bind ("C-c f" . projectile-find-file)
+  :config (projectile-global-mode))
