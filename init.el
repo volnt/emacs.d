@@ -1,3 +1,7 @@
+;; Set custom file location
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
 (package-initialize)
 (eval-when-compile
   (add-to-list 'load-path "~/.emacs.d/site-lisp/use-package/")
