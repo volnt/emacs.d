@@ -20,3 +20,7 @@
 (use-package undo-tree
   :ensure t
   :config (global-undo-tree-mode))
+
+(use-package multiple-cursors
+  :ensure t
+  :bind ("C-c m" . mc/mark-all-in-region))
