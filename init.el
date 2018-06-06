@@ -32,3 +32,9 @@
   :ensure t
   :diminish
   :hook (prog-mode . rainbow-delimiters-mode))
+
+(use-package py-autopep8
+  :ensure t
+  :bind ("C-c u" . py-autopep8-buffer)
+  :hook (python-mode . py-autopep8-enable-on-save)
+  :custom (py-autopep8-options '("--max-line-length=120")))
