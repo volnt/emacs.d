@@ -87,3 +87,7 @@
   :custom ((nlinum-highlight-current-line t)
 	   (nlinum-format "%4d"))
   :config (global-nlinum-mode))
+
+(use-package org
+  :ensure t
+  :bind ("C-c a" . org-agenda))
