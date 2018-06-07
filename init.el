@@ -66,3 +66,7 @@
   :ensure t
   :bind ("C-c ;" . jedi:goto-definition)
   :hook (python-mode . jedi:setup))
+
+(use-package solarized-theme
+  :ensure t
+  :config (load-theme 'solarized-dark))
