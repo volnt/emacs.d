@@ -1,3 +1,12 @@
+;; Remove menu & scroll bars and other visual things
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(setq column-number-mode nil)
+(setq line-number-mode nil)
+(setq size-indication-mode nil)
+(setq inhibit-startup-screen t)
+
 ;; Set custom file location
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
