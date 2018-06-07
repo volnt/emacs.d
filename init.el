@@ -103,6 +103,9 @@
   :ensure t
   :hook (python-mode . blacken-mode))
 
+(use-package realgud
+  :ensure t
+  :config (load-library "realgud"))
 
 ;; Variable customizations
 (setq mouse-yank-at-point t)
