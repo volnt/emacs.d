@@ -91,3 +91,7 @@
 (use-package org
   :ensure t
   :bind ("C-c a" . org-agenda))
+
+(use-package ido
+  :ensure t
+  :config (ido-mode t))
