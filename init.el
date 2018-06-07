@@ -44,12 +44,6 @@
   :diminish
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package py-autopep8
-  :ensure t
-  :bind ("C-c u" . py-autopep8-buffer)
-  :hook (python-mode . py-autopep8-enable-on-save)
-  :custom (py-autopep8-options '("--max-line-length=120")))
-
 (use-package py-isort
   :ensure t
   :bind ("C-c i" . py-isort-before-save)
@@ -101,7 +95,9 @@
 
 (use-package blacken
   :ensure t
-  :hook (python-mode . blacken-mode))
+  :diminish
+  :hook (python-mode . blacken-mode)
+  :custom (blacken-line-length 120))
 
 (use-package realgud
   :ensure t
