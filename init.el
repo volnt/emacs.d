@@ -91,7 +91,9 @@
 
 (use-package org
   :ensure t
-  :bind ("C-c a" . org-agenda))
+  :bind (("C-c a" . org-agenda)
+	 ("C-c l" . org-store-link))
+  :config (setq org-html-doctype "html5"))
 
 (use-package ido
   :ensure t
