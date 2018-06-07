@@ -70,3 +70,9 @@
 (use-package solarized-theme
   :ensure t
   :config (load-theme 'solarized-dark))
+
+(use-package nlinum
+  :ensure t
+  :diminish
+  :custom (nlinum-highlight-current-line t)
+  :config (global-nlinum-mode))
