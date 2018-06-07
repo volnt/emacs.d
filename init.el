@@ -27,7 +27,8 @@
 (use-package magit
   :ensure t
   :bind (("C-c s" . magit-status)
-	 ("C-c b" . magit-blame)))
+	 ("C-c b" . magit-blame)
+	 ("C-c g" . vc-git-grep)))
 
 (use-package undo-tree
   :ensure t
