@@ -98,3 +98,8 @@
 (use-package ido
   :ensure t
   :config (ido-mode t))
+
+(use-package blacken
+  :ensure t
+  :hook (python-mode . blacken-mode))
+
