@@ -76,3 +76,7 @@
   :diminish
   :custom (nlinum-highlight-current-line t)
   :config (global-nlinum-mode))
+
+(use-package hl-line
+  :ensure t
+  :config (hl-line-mode))
