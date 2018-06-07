@@ -57,7 +57,7 @@
 (use-package projectile
   :ensure t
   :bind ("C-c f" . projectile-find-file)
-  :config (projectile-global-mode))
+  :config (projectile-mode))
 
 (use-package autorevert
   :diminish)
