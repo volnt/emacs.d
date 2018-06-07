@@ -103,3 +103,6 @@
   :ensure t
   :hook (python-mode . blacken-mode))
 
+
+;; Variable customizations
+(setq mouse-yank-at-point t)
