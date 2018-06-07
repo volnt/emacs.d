@@ -87,7 +87,7 @@
   :diminish
   :custom ((nlinum-highlight-current-line t)
 	   (nlinum-format "%4d"))
-  :config (global-nlinum-mode))
+  :hook (prog-mode . nlinum-mode))
 
 (use-package org
   :ensure t
