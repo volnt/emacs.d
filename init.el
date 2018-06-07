@@ -71,12 +71,19 @@
   :ensure t
   :config (load-theme 'solarized-dark))
 
+(use-package hl-line
+  :ensure t
+  :config (global-hl-line-mode))
+
+;; (use-package diff-hl
+;;   :ensure t
+;;   :config (global-diff-hl-mode))
+
+;; (setq fringes-outside-margins t)
+
 (use-package nlinum
   :ensure t
   :diminish
-  :custom (nlinum-highlight-current-line t)
+  :custom ((nlinum-highlight-current-line t)
+	   (nlinum-format "%4d"))
   :config (global-nlinum-mode))
-
-(use-package hl-line
-  :ensure t
-  :config (hl-line-mode))
