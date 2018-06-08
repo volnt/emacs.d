@@ -103,5 +103,8 @@
   :ensure t
   :config (load-library "realgud"))
 
+(use-package lua-mode
+  :ensure t)
+
 ;; Variable customizations
 (setq mouse-yank-at-point t)
