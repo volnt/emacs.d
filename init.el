@@ -118,3 +118,4 @@
 
 ;; Variable customizations
 (setq mouse-yank-at-point t)
+(setq-default indent-tabs-mode nil)
