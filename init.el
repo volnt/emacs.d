@@ -85,9 +85,16 @@
 
 (use-package org
   :ensure t
-  :bind (("C-c a" . org-agenda)
-	 ("C-c l" . org-store-link))
-  :config (setq org-html-doctype "html5"))
+  :bind (("C-c a" . org-agenda-list)
+	 ("C-c l" . org-store-link)
+         ("C-c c" . org-capture))
+  :config
+  (setq org-html-doctype "html5")
+  (setq org-capture-templates
+        '(("l" "LumApps todo entry." entry (file "~/dev/lumapps/work.org")
+           "* TODO %?\n  %i")
+          ("p" "Personal todo entry." entry (file "~/perso.org")
+           "* TODO %?\n  %i"))))
 
 (use-package ido
   :ensure t
