@@ -113,5 +113,8 @@
 (use-package lua-mode
   :ensure t)
 
+(use-package yaml-mode
+  :ensure t)
+
 ;; Variable customizations
 (setq mouse-yank-at-point t)
