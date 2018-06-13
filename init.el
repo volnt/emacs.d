@@ -109,6 +109,16 @@
 (use-package yaml-mode
   :ensure t)
 
+(use-package yasnippet
+  :ensure t
+  :diminish
+  :config (yas-global-mode t))
+
+(use-package flycheck
+  :ensure t
+  :diminish
+  :config (global-flycheck-mode))
+
 ;; Variable customizations
 (setq mouse-yank-at-point t)
 (setq-default indent-tabs-mode nil)
