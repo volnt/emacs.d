@@ -70,9 +70,9 @@
   :ensure t
   :config (global-hl-line-mode))
 
-;; (use-package diff-hl
-;;   :ensure t
-;;   :config (global-diff-hl-mode))
+(use-package git-gutter
+  :ensure t
+  :config (global-git-gutter-mode t))
 
 ;; (setq fringes-outside-margins t)
 
