@@ -76,13 +76,6 @@
 
 ;; (setq fringes-outside-margins t)
 
-(use-package nlinum
-  :ensure t
-  :diminish
-  :custom ((nlinum-highlight-current-line t)
-	   (nlinum-format "%4d"))
-  :hook (prog-mode . nlinum-mode))
-
 (use-package org
   :ensure t
   :bind (("C-c a" . org-agenda-list)
@@ -119,3 +112,4 @@
 ;; Variable customizations
 (setq mouse-yank-at-point t)
 (setq-default indent-tabs-mode nil)
+(global-display-line-numbers-mode)
