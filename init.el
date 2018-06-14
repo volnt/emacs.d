@@ -126,3 +126,4 @@
 (setq mouse-yank-at-point t)
 (setq-default indent-tabs-mode nil)
 (global-display-line-numbers-mode)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
