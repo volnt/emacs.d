@@ -79,9 +79,9 @@
   :config
   (setq org-html-doctype "html5")
   (setq org-capture-templates
-        '(("l" "LumApps todo entry." entry (file "~/dev/lumapps/work.org")
+        '(("b" "Backmarket todo entry." entry (file "~/dev/bm/todo.org")
            "* TODO %?\n  %i")
-          ("p" "Personal todo entry." entry (file "~/perso.org")
+          ("p" "Personal todo entry." entry (file "~/todo.org")
            "* TODO %?\n  %i"))))
 
 (use-package ido
