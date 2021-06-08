@@ -60,7 +60,8 @@
 
 (use-package jedi
   :ensure t
-  :bind ("C-c ;" . jedi:goto-definition)
+  :bind (("C-c ;" . jedi:goto-definition)
+         ("C-c ," . jedi:goto-definition-pop-marker))
   :hook (python-mode . jedi:setup))
 
 (use-package solarized-theme
