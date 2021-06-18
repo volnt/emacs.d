@@ -44,6 +44,12 @@
   :diminish
   :hook (prog-mode . rainbow-delimiters-mode))
 
+(use-package py-isort
+  :ensure t
+  :bind ("C-c i" . py-isort-before-save)
+  :custom
+  (py-isort-options '("-w 120")))
+
 (use-package projectile
   :ensure t
   :bind ("C-c f" . projectile-find-file)
@@ -104,6 +110,27 @@
 (use-package yaml-mode
   :ensure t)
 
+(use-package terraform-mode
+  :ensure t)
+
+(use-package haxe-mode
+  :mode ("\\.hx\\'" . haxe-mode)
+  :no-require t
+  :init
+  (require 'js)
+  (define-derived-mode haxe-mode js-mode "Haxe"
+    "Haxe syntax highlighting mode. This is simply using js-mode for now."))
+
+(use-package battle-haxe
+  :hook (haxe-mode . battle-haxe-mode)
+  :bind (("S-<f4>" . #'pop-global-mark) ;To get back after visiting a definition
+         :map battle-haxe-mode-map
+         ("<f4>" . #'battle-haxe-goto-definition)
+         ("<f12>" . #'battle-haxe-helm-find-references))
+  :custom
+  (battle-haxe-yasnippet-completion-expansion t "Keep this if you want yasnippet to expand completions when it's available.")
+  (battle-haxe-immediate-completion nil "Toggle this if you want to immediately trigger completion when typing '.' and other relevant prefixes."))
+
 (use-package yasnippet
   :ensure t
   :diminish
@@ -122,3 +149,4 @@
 (setq-default indent-tabs-mode nil)
 (global-display-line-numbers-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'py-isort-before-save)
